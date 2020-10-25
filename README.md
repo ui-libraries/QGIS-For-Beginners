@@ -1,5 +1,5 @@
 # QGIS for Beginners
-Online tutorials for introductory QGIS
+Online [tutorials](https://ui-libraries.github.io/QGIS-For-Beginners/) for introductory QGIS
 
 ## Contents
 
