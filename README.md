@@ -37,7 +37,7 @@ Online [tutorials](https://ui-libraries.github.io/QGIS-For-Beginners/) for intro
 Let’s map life expectancy for census tracts in Iowa. What do we need?
 
 ### Find and Download Data
-First, navigate to the [CDC website](https://www.cdc.gov/nchs/nvss/usaleep/usaleep.html#data) to find life expectancy data by census tract. We could download data for the entire US, but let's scroll down to Iowa and select and download the csv in the second column.
+First, navigate to the <a href="https://www.cdc.gov/nchs/nvss/usaleep/usaleep.html#data" target="_blank">CDC website</a> to find life expectancy data by census tract. We could download data for the entire US, but let's scroll down to Iowa and select and download the csv in the second column.
 
 ![Iowa census tract life expectancy data](images/iowa-life-expectancy-csv.png)  
 **Figure 01**. Download Iowa census tract life expectancy data.
