@@ -3,7 +3,7 @@ Online [tutorials](https://ui-libraries.github.io/QGIS-For-Beginners/) for intro
 
 ## Contents
 
-- [Week 1: Finding Data and Opening in QGIS](#week-1-finding-data-and-opening-in-qgis)
+- [1: Finding Data and Opening in QGIS](#1-finding-data-and-opening-in-qgis)
   - [Find and Download Data](#find-and-download-data)
   - [Adding Data to the Map Window](#adding-data-to-the-map-window)
   - [Setting the Map Projection](#setting-the-map-projection)
@@ -11,21 +11,21 @@ Online [tutorials](https://ui-libraries.github.io/QGIS-For-Beginners/) for intro
   - [Dissolving a Shapefile](#dissolving-a-shapefile)
   - [Clipping a Shapefile](#clipping-a-shapefile)
   - [Recap](#recap)
-- [Week 2: Loading a CSV File, Performing Table Joins to Continuous Shapes, Choropleth Mapping](#week-2-loading-a-csv-file-performing-table-joins-to-continuous-shapes-choropleth-mapping)
+- [2: Loading a CSV File, Performing Table Joins to Continuous Shapes, Choropleth Mapping](2-loading-a-csv-file-performing-table-joins-to-continuous-shapes-choropleth-mapping)
   - [Loading Spreadsheet Data in QGIS](#loading-spreadsheet-data-in-qgis)
   - [Joining Attributes by Field Value](#joining-attributes-by-field-value)
   - [Choropleth Mapping](#choropleth-mapping)
-- [Week 3: Connecting to a Web Service and Prepping Shapefiles for Analysis](#week-3-connecting-to-a-web-service-and-prepping-shapefiles-for-analysis)
+- [3: Connecting to a Web Service and Prepping Shapefiles for Analysis](#3-connecting-to-a-web-service-and-prepping-shapefiles-for-analysis)
   - [Connecting to a Web Service](#connecting-to-a-web-service)
   - [Reprojecting a Layer](#reprojecting-a-layer)  
   - [Fixing Geometries](#fixing-geometries)   
-- [Week 4: Analyzing How Much of X in Y](#week-4-analyzing-how-much-of-x-in-y)
+- [4: Analyzing How Much of X in Y](#4-analyzing-how-much-of-x-in-y)
   - [Introducing the Python Console](#introducing-the-python-console)
   - [Calculating Polygon Area](#calculating-polygon-area)
   - [Joining Attributes by Field Value (Again)](#joining-attributes-by-field-value-again)
   - [Use Field Calculator to Determine Percent Rec Land for Each Tract](#use-field-calculator-to-determine-percent-rec-land-for-each-tract)
   - [Extra: Saving Data to a CSV to Run Pearson's Correlation Coefficient in Excel](#extra-saving-data-to-a-csv-to-run-pearsons-correlation-coefficient-in-excel)
-- [Week 5: Preparing and Exporting a Map in QGIS](#week-5-preparing-and-exporting-a-map-in-qgis)
+- [5: Preparing and Exporting a Map in QGIS](#5-preparing-and-exporting-a-map-in-qgis)
   - [Adding a Map to the Print Layout](#adding-a-map-to-the-print-layout)
   - [Adding a Legend](#adding-a-legend)
   - [Adding a Scale Bar](#adding-a-scale-bar)
@@ -33,7 +33,7 @@ Online [tutorials](https://ui-libraries.github.io/QGIS-For-Beginners/) for intro
   - [Adding Text Elements](#adding-text-elements)
   - [Exporting to a PDF](#exporting-to-a-pdf)
 
-## Week 1: Finding Data and Opening in QGIS
+## 1: Finding Data and Opening in QGIS
 Let’s map life expectancy for census tracts in Iowa. What do we need?
 
 ### Find and Download Data
@@ -183,7 +183,7 @@ Once again, save your project over your old qgz file in the root of your project
 
 In this lesson, you learned a few of the most important aspects of using GIS to visualize and manipulate your data. You saw how reliable data is freely available on the internet for download and use. You learned different ways to load a shapefile into an active map edit session with QGIS. You learned how to remove layers from the edit session. You saw how to add a base map for spatial context. Next, you found out how to set an appropriate projection for your map project. After this, you learned how to select features using an expression and how to export these features to a new shapefile. Finally, you learned about dissolving features to create new shapefiles for Johnson County and all the counties in Iowa. When you are ready, proceed to the next lesson!
 
-## Week 2: Loading a CSV File, Performing Table Joins to Continuous Shapes, Choropleth Mapping
+## 2: Loading a CSV File, Performing Table Joins to Continuous Shapes, Choropleth Mapping
 
 Last time, you downloaded some spreadsheet data on life expectancy by Iowa census tract, but we did not load this data in QGIS.
 
@@ -250,7 +250,7 @@ Again, right click on your choropleth life expectancy layer and open the propert
 
 Return to your active map edit window and notice the difference. You can now see the names of the communities and the road networks of the base map through the newly styled life expectancy layer. This is looking good, and you have made a lot of progress, so save these edits to your qgz file in the root of your project folder. For the time being, let's turn to something a little different to build up your GIS skill set. Keep your map project open and turn off all layers except the life expectancy census tract layer in your table of contents.
 
-## Week 3: Connecting to a Web Service and Prepping Shapefiles for Analysis
+## 3: Connecting to a Web Service and Prepping Shapefiles for Analysis
 
 Let's say we were interested in researching the correlation between recreational opportunities and life expectancy by census tract. Obviously, to claim any sort of possible causality, we would need a lot more research to withstand scrutiny. However, a map like this can provide a nice visual for conveying your thesis or findings to a wider audience. For this lesson, we will calculate the percentage of land devoted to recreational areas for each census tract so that we can compare this to the average life expectancy for each tract.
 
@@ -296,7 +296,7 @@ Find this tool the same way you found the last one and open it. Set the input la
 ![Census tracts and rec space](images/census-tracts-rec-space.png)  
 **Figure 37**. Census tracts and public recreational lands.
 
-## Week 4: Analyzing How Much of X in Y
+## 4: Analyzing How Much of X in Y
 
 You may have noticed that it was sort of a pain to run multiple tools individually, and you may be wondering if there is some way to program all of these tools to run automatically in succession. There is, but you will need to get comfortable with using some Python in the built-in Python Console. Python is a programming language, and the Python library you will need to use for data processing in QGIS is baked into the software.
 
@@ -438,7 +438,7 @@ Right click "Rec_Land_per_Tract" in the table of contents and click "Export" -> 
 
 Strong correlation is a number close to 1 or -1, so this value proves there is little to no correlation statewide between life expectancy and percent of land devoted to recreation. This is not to say there is no correlation at some other scale. For example, if you were very interested in this topic, you may wish to see if there is any correlation when testing for urban census tracts alone, as it is likely that access to recreational land matters relatively less in rural areas where most people are close to outdoor activities by default. Save your data and progress.
 
-## Week 5: Preparing and Exporting a Map in QGIS
+## 5: Preparing and Exporting a Map in QGIS
 
 So how do you prepare a map for inclusion in a publication or presentation? First, you need to set up your map edit screen so that only the layers you want to appear in the final map are visible. Also, you will want to make sure you have styled your map layers appropriately. For this exercise, you will finalize a map of life expectancy by census tract for the State of Iowa, so go ahead and remove all layers (but leave the base map!) except for "IA_tracts_life_expectancy_2019_UTM15N" so that your map edit window looks like this:
 
