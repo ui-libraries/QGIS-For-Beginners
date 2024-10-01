@@ -268,7 +268,7 @@ In the dialogue box that opens, click the "New" button under "Server Connections
 ![Connecting ArcGIS FeatureServer Layer](images/add-feature-service-2.png)  
 **Figure 33**. Connecting an Add ArcGIS FeatureServer Layer.
 
-Now, in the browser window, scroll down to "ArcGisFeatureServer" and maximize its contents. You should see "Iowa Rec Land" there, so you can go ahead and maximize this as well. Scroll down to "Public Areas" and drag and drop this into your map.
+Now, in the browser window, scroll down to "ArcGIS REST Servers" and maximize its contents. You should see "Iowa Rec Land" there, so you can go ahead and maximize this as well. Scroll down to "Public Areas" and drag and drop this into your map.
 
 ![Finding the feature service](images/find-public-areas-feature-service.png)  
 **Figure 34**. Finding the feature service in the browser window.
