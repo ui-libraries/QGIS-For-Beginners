@@ -256,14 +256,14 @@ Let's say we were interested in researching the correlation between recreational
 
 ### Connecting to a Web Service
 
-Instead of downloading data to our desktop, we can link QGIS to a server on the web that hosts the public recreational land data we need. Using web services to access GIS data is a nice and convenient way to work with open source data in QGIS. First, navigate to the Iowa DNR's [Recreation Atlas Web Service](https://iowadnr.maps.arcgis.com/home/item.html?id=c9a5551044a84ff6bf2fde343b9dac07). In the lower right corner of this page, you will notice a url that you can copy. For convenience, the url you need to copy is: https://programs.iowadnr.gov/geospatial/rest/services/Recreation/Recreation2020/MapServer.
+Instead of downloading data to our desktop, we can link QGIS to a server on the web that hosts the public recreational land data we need. Using web services to access GIS data is a nice and convenient way to work with open source data in QGIS. First, navigate to the Iowa DNR's [Recreation Atlas Web Service](https://iowadnr.maps.arcgis.com/home/item.html?id=c9a5551044a84ff6bf2fde343b9dac07). In the lower right corner of this page, you will notice a url that you can copy. For convenience, the url you need to copy is: https://programs.iowadnr.gov/geospatial/rest/services/Recreation/Recreation/MapServer.
 
 You may have noticed that the Recreation Atlas Web Service is an ArcGIS service. That's fine, QGIS can handle this. From the options in the top bar, choose "Layer" -> "Add Layer" -> "Add ArcGIS FeatureServer Layer" as shown in the screenshot below.
 
 ![Add ArcGIS FeatureServer Layer](images/add-feature-service-1.png)  
 **Figure 32**. Selecting the Add ArcGIS FeatureServer Layer option.
 
-In the dialogue box that opens, click the "New" button under "Server Connections." Name this connection "Iowa Rec Land" and paste the copied url (https://programs.iowadnr.gov/geospatial/rest/services/Recreation/Recreation2020/MapServer) into the URL box. Click "OK."
+In the dialogue box that opens, click the "New" button under "Server Connections." Name this connection "Iowa Rec Land" and paste the copied url (https://programs.iowadnr.gov/geospatial/rest/services/Recreation/Recreation/MapServer) into the URL box. Click "OK."
 
 ![Connecting ArcGIS FeatureServer Layer](images/add-feature-service-2.png)  
 **Figure 33**. Connecting an Add ArcGIS FeatureServer Layer.
