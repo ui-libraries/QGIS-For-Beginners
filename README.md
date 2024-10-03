@@ -311,7 +311,7 @@ print("I'm using Python")
 If you press the return key, you should notice that "I'm using Python" has logged to the console window. Now for something more exciting. Click the little button that looks like a pen over a notepad and type the following into the editor window that opens (I have commented out explanations alongside the code). Make sure that you update any file paths in the following scripts to refer to the files on your own computer, rather than mine.
 
 ```python
-publicAreasFile = "/Users/jaybowen/Desktop/IA-life-expectancy-map/data/Public_Areas_fixed.shp" # Define the source of your data with the path to your Public_Areas_fixed shapefile.
+publicAreasFile = "/[Path]/[to]/[your]/[folder]/data/Public_Areas_fixed.shp" # Define the source of your data with the path to your Public_Areas_fixed shapefile.
 publicAreasLayer = QgsVectorLayer(publicAreasFile, '', 'ogr') # QgsVectorLayer(data_source, layer_name, provider_name)
 for field in publicAreasLayer.fields(): # For each field in the layer...
     print(field.name()) # print the name of the field.
@@ -325,10 +325,10 @@ Press the run script button, which looks like a green triangle or play button. N
 Now, continuing to add to this script, do the same thing with your "IA_tracts_life_expectancy_2019_UTM15N" layer.
 
 ```python
-publicAreasFile = "/Users/jaybowen/Desktop/IA-life-expectancy-map/data/Public_Areas_fixed.shp" # Define the source of your data with the path to your Public_Areas_fixed shapefile.
+publicAreasFile = "/[Path]/[to]/[your]/[folder]/data/Public_Areas_fixed.shp" # Define the source of your data with the path to your Public_Areas_fixed shapefile.
 publicAreasLayer = QgsVectorLayer(publicAreasFile, '', 'ogr') # QgsVectorLayer(data_source, layer_name, provider_name)
 
-tractsLEFile = "/Users/jaybowen/Desktop/IA-life-expectancy-map/data/IA_tracts_life_expectancy_2019_UTM15N.shp" # Define the source of your data with the path to your IA_tracts_life_expectancy_2019_UTM15N shapefile.
+tractsLEFile = "/[Path]/[to]/[your]/[folder]/data/IA_tracts_life_expectancy_2019_UTM15N.shp" # Define the source of your data with the path to your IA_tracts_life_expectancy_2019_UTM15N shapefile.
 tractsLELayer = QgsVectorLayer(tractsLEFile, '', 'ogr') # QgsVectorLayer(data_source, layer_name, provider_name)
 
 for field in tractsLELayer.fields(): # For each field in the layer...
@@ -345,33 +345,33 @@ So you have possession of your shapefiles in the Python console. Time to run som
 First, delete the code starting with "for field in" and replace this with:
 
 ```python
-processing.run('qgis:intersection', {'INPUT' : tractsLELayer, 'OVERLAY' : publicAreasLayer, 'OUTPUT' : "/Users/jaybowen/Desktop/IA-life-expectancy-map/data/Intersect_Test.shp"})
+processing.run('qgis:intersection', {'INPUT' : tractsLELayer, 'OVERLAY' : publicAreasLayer, 'OUTPUT' : "/[Path]/[to]/[your]/[folder]/data/Intersect_Test.shp"})
 ```
 
 so that your entire script now looks like the following...
 
 ```python
-publicAreasFile = "/Users/jaybowen/Desktop/IA-life-expectancy-map/data/Public_Areas_fixed.shp" # Define the source of your data with the path to your Public_Areas_fixed shapefile.
+publicAreasFile = "/[Path]/[to]/[your]/[folder]/data/Public_Areas_fixed.shp" # Define the source of your data with the path to your Public_Areas_fixed shapefile.
 publicAreasLayer = QgsVectorLayer(publicAreasFile, '', 'ogr') # QgsVectorLayer(data_source, layer_name, provider_name)
 
-tractsLEFile = "/Users/jaybowen/Desktop/IA-life-expectancy-map/data/IA_tracts_life_expectancy_2019_UTM15N.shp" # Define the source of your data with the path to your IA_tracts_life_expectancy_2019_UTM15N shapefile.
+tractsLEFile = "/[Path]/[to]/[your]/[folder]/data/IA_tracts_life_expectancy_2019_UTM15N.shp" # Define the source of your data with the path to your IA_tracts_life_expectancy_2019_UTM15N shapefile.
 tractsLELayer = QgsVectorLayer(tractsLEFile, '', 'ogr') # QgsVectorLayer(data_source, layer_name, provider_name)
 
-processing.run('qgis:intersection', {'INPUT' : tractsLELayer, 'OVERLAY' : publicAreasLayer, 'OUTPUT' : "/Users/jaybowen/Desktop/IA-life-expectancy-map/data/rec_tract_intersect.shp"}) # This runs the intersection tool with your tracts and public rec layers as the inputs and designates a new file called "rec_tract_intersect.shp" to be output to your data folder
+processing.run('qgis:intersection', {'INPUT' : tractsLELayer, 'OVERLAY' : publicAreasLayer, 'OUTPUT' : "/[Path]/[to]/[your]/[folder]/data/rec_tract_intersect.shp"}) # This runs the intersection tool with your tracts and public rec layers as the inputs and designates a new file called "rec_tract_intersect.shp" to be output to your data folder
 ```
 
 Before you press run, add another script to dissolve the output of the intersection by census tract.
 
 ```python
-publicAreasFile = "/Users/jaybowen/Desktop/IA-life-expectancy-map/data/Public_Areas_fixed.shp" # Define the source of your data with the path to your Public_Areas_fixed shapefile.
+publicAreasFile = "/[Path]/[to]/[your]/[folder]/data/Public_Areas_fixed.shp" # Define the source of your data with the path to your Public_Areas_fixed shapefile.
 publicAreasLayer = QgsVectorLayer(publicAreasFile, '', 'ogr') # QgsVectorLayer(data_source, layer_name, provider_name)
 
-tractsLEFile = "/Users/jaybowen/Desktop/IA-life-expectancy-map/data/IA_tracts_life_expectancy_2019_UTM15N.shp" # Define the source of your data with the path to your IA_tracts_life_expectancy_2019_UTM15N shapefile.
+tractsLEFile = "/[Path]/[to]/[your]/[folder]/data/IA_tracts_life_expectancy_2019_UTM15N.shp" # Define the source of your data with the path to your IA_tracts_life_expectancy_2019_UTM15N shapefile.
 tractsLELayer = QgsVectorLayer(tractsLEFile, '', 'ogr') # QgsVectorLayer(data_source, layer_name, provider_name)
 
-processing.run('qgis:intersection', {'INPUT' : tractsLELayer, 'OVERLAY' : publicAreasLayer, 'OUTPUT' : "/Users/jaybowen/Desktop/IA-life-expectancy-map/data/rec_tract_intersect.shp"}) # This runs the intersection tool with your tracts and public rec layers as the inputs and designates a new file called "rec_tract_intersect.shp" to be output to your data folder
+processing.run('qgis:intersection', {'INPUT' : tractsLELayer, 'OVERLAY' : publicAreasLayer, 'OUTPUT' : "/[Path]/[to]/[your]/[folder]/data/rec_tract_intersect.shp"}) # This runs the intersection tool with your tracts and public rec layers as the inputs and designates a new file called "rec_tract_intersect.shp" to be output to your data folder
 
-processing.run('qgis:dissolve', {'INPUT' : "/Users/jaybowen/Desktop/IA-life-expectancy-map/data/rec_tract_intersect.shp", 'FIELD' : "GEOID", 'OUTPUT' : "/Users/jaybowen/Desktop/IA-life-expectancy-map/data/rec_tract_intersect_dissolve.shp"}) # This runs the dissolve tool on your new "rec_tract_intersect.shp" file using GEOID (the complete unique census tract number) as the dissolve field and outputs "rec_tract_intersect_dissolve.shp" your data folder.
+processing.run('qgis:dissolve', {'INPUT' : "/[Path]/[to]/[your]/[folder]/data/rec_tract_intersect.shp", 'FIELD' : "GEOID", 'OUTPUT' : "/[Path]/[to]/[your]/[folder]/data/rec_tract_intersect_dissolve.shp"}) # This runs the dissolve tool on your new "rec_tract_intersect.shp" file using GEOID (the complete unique census tract number) as the dissolve field and outputs "rec_tract_intersect_dissolve.shp" your data folder.
 ```
 
 Notice that you can simply use the file path as your input for running these processing tools. This is good to know if you are just running tools and not trying to parse data from your shapefiles. Once again, make sure that the paths in your script refer to file paths on your computer rather than mine. Now, press the "Run Script" button.
